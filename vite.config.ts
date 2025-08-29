@@ -24,7 +24,35 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          three: ['three', '@react-three/fiber', '@react-three/drei'],
+          ui: ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+        },
+      },
+    },
+    // Use esbuild minification (default) instead of terser
+    minify: true,
+    sourcemap: false,
+    target: 'es2015',
+    assetsInlineLimit: 4096,
   },
   // Add support for large models and audio files
   assetsInclude: ["**/*.gltf", "**/*.glb", "**/*.mp3", "**/*.ogg", "**/*.wav"],
+  // Optimize dependencies
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'three'],
+  },
+  // Server configuration for development
+  server: {
+    port: 5173,
+    host: true,
+  },
+  // Preview configuration for testing builds
+  preview: {
+    port: 4173,
+    host: true,
+  },
 });

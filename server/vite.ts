@@ -26,7 +26,7 @@ export async function setupVite(app: Express, server: Server) {
   const serverOptions: ServerOptions = {
     middlewareMode: true,
     hmr: { server },
-    allowedHosts: true,
+    allowedHosts: ["all"],
   };
 
   const vite = await createViteServer({
@@ -71,18 +71,36 @@ export async function setupVite(app: Express, server: Server) {
 }
 
 export function serveStatic(app: Express) {
-  const distPath = path.resolve(__dirname, "public");
+  // Fix the path to point to the correct dist/public directory
+  const distPath = path.resolve(__dirname, "..", "dist", "public");
 
   if (!fs.existsSync(distPath)) {
+    log(`Build directory not found: ${distPath}`, "error");
+    log("Please run 'npm run build' first", "error");
     throw new Error(
-      `Could not find the build directory: ${distPath}, make sure to build the client first`,
+      `Could not find the build directory: ${distPath}, make sure to build the client first with 'npm run build'`
     );
   }
 
-  app.use(express.static(distPath));
+  log(`Serving static files from: ${distPath}`, "info");
+  
+  // Serve static files with proper caching headers for production
+  app.use(express.static(distPath, {
+    maxAge: process.env.NODE_ENV === 'production' ? '1y' : '0',
+    etag: true,
+    lastModified: true
+  }));
 
-  // fall through to index.html if the file doesn't exist
+  // fall through to index.html if the file doesn't exist (SPA routing)
   app.use("*", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
+    const indexPath = path.resolve(distPath, "index.html");
+    if (fs.existsSync(indexPath)) {
+      res.sendFile(indexPath);
+    } else {
+      res.status(404).json({ 
+        error: "Not found",
+        message: "The requested resource was not found on this server."
+      });
+    }
   });
 }

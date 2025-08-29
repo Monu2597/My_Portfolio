@@ -25,19 +25,21 @@ export function useScrollAnimation() {
         let currentEntry: IntersectionObserverEntry | null = null;
         let highestRatio = 0;
         
-        entries.forEach((entry) => {
+        for (const entry of entries) {
           if (entry.isIntersecting && entry.intersectionRatio > highestRatio) {
             highestRatio = entry.intersectionRatio;
             currentEntry = entry;
           }
-        });
+        }
         
         // Update current section based on the most visible section
         if (currentEntry && highestRatio > 0.1) {
-          const element = currentEntry.target as Element;
-          const sectionId = element.getAttribute('data-section');
-          if (sectionId) {
-            setCurrentSection(sectionId);
+          const element = currentEntry.target;
+          if (element instanceof Element) {
+            const sectionId = element.getAttribute('data-section');
+            if (sectionId) {
+              setCurrentSection(sectionId);
+            }
           }
         }
         
