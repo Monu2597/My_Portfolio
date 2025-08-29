@@ -601,7 +601,7 @@
 .education-timeline::before {
   content: '';
   position: absolute;
-  left: 100px;
+  left: 115px;
   top: 0;
   bottom: 0;
   width: 2px;
@@ -610,29 +610,40 @@
 
 .education-item {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 100px 1fr;
   gap: 2rem;
   padding: 1.5rem 0;
   position: relative;
+  align-items: start;
 }
 
 .education-item::before {
   content: '';
   position: absolute;
-  left: 99px;
+  left: 113px;
   top: 2rem;
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
   background: var(--accent);
   border-radius: 50%;
   z-index: 1;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
 }
 
 .education-year {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--primary);
   font-weight: 700;
   text-align: right;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
 }
 
 .education-content h4 {
@@ -1058,22 +1069,24 @@
   }
   
   .education-timeline::before {
-    left: 20px;
+    left: 30px;
   }
   
   .education-item {
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding-left: 2.5rem;
+    padding-left: 3rem;
   }
   
   .education-item::before {
-    left: 19px;
+    left: 27px;
   }
   
   .education-year {
-    text-align: left;
+    text-align: center;
     font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    width: fit-content;
   }
 }
 
