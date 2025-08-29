@@ -387,6 +387,23 @@
   font-weight: 500;
 }
 
+/* Hero Contact Info */
+.hero-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  font-size: 1rem;
+  color: #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 /* Contact Section */
 .contact-content {
   max-width: 1200px;
@@ -435,6 +452,63 @@
 .contact-value {
   color: var(--foreground);
   font-weight: 500;
+}
+
+/* Education and Additional Sections */
+.education-section {
+  margin-top: 3rem;
+}
+
+.education-section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--secondary);
+}
+
+.education-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.education-item h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.education-item p {
+  color: #cccccc;
+  font-size: 0.95rem;
+}
+
+.tools-section, .learning-section {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.tools-section h4, .learning-section h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.tools-section p, .learning-section p {
+  color: #cccccc;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.learning-section strong {
+  color: var(--primary);
 }
 
 .contact-form {

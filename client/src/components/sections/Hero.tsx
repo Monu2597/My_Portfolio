@@ -43,15 +43,20 @@ export default function Hero() {
     >
       <div className="hero-content">
         <h1 ref={titleRef} className="hero-title">
-          Creative Developer
+          Mohit Yadav
         </h1>
         <p ref={subtitleRef} className="hero-subtitle">
-          Crafting immersive digital experiences through code and creativity
+          Senior QA Engineer with 5+ years of hands-on experience in manual testing across web and mobile applications
         </p>
         <div className="hero-cta">
           <button className="cta-button">
-            Explore My Work
+            View My Projects
           </button>
+          <div className="hero-contact">
+            <span className="contact-info">📧 mohityadav2597@gmail.com</span>
+            <span className="contact-info">📱 +91 8826920160</span>
+            <span className="contact-info">📍 New Delhi, India</span>
+          </div>
         </div>
       </div>
     </section>

@@ -6,28 +6,40 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "3D E-commerce Platform",
-    description: "Interactive product visualization with Three.js and WebGL",
-    tech: ["React", "Three.js", "WebGL", "Node.js"],
+    title: "MBD Finance – Blockchain E-commerce Platform",
+    description: "Integrated MetaMask wallet for crypto payments, increasing digital product sales by 20%. Enhanced platform scalability by 25% via dealer submission approval feature.",
+    tech: ["Blockchain", "MetaMask", "E-commerce", "Manual Testing"],
     image: "/textures/wood.jpg"
   },
   {
-    title: "Real-time Collaboration Tool",
-    description: "Multi-user workspace with live synchronization",
-    tech: ["TypeScript", "WebSockets", "MongoDB", "React"],
+    title: "Mr. Fix – On-demand Service Booking App",
+    description: "Boosted user engagement by 25% by designing intuitive dual interfaces for customers and providers. Comprehensive testing of booking workflows.",
+    tech: ["Mobile App", "Service Booking", "UI Testing", "User Engagement"],
     image: "/textures/asphalt.png"
   },
   {
-    title: "AR Mobile Experience",
-    description: "Augmented reality application for retail visualization",
-    tech: ["React Native", "ARKit", "WebRTC", "Python"],
+    title: "Praavi HRMS – Workforce Management System",
+    description: "Enabled attendance tracking via facial recognition; onboarded 100+ users with role-based access. Extensive testing of access controls and user management.",
+    tech: ["HRMS", "Facial Recognition", "Role-based Access", "API Testing"],
     image: "/textures/grass.png"
   },
   {
-    title: "Data Visualization Dashboard",
-    description: "Interactive analytics platform with real-time updates",
-    tech: ["D3.js", "React", "Python", "PostgreSQL"],
+    title: "eGurukul – eLearning Platform",
+    description: "Served 40,000 students with 1,200 pre-recorded lectures and 500+ assessments. Drove 30% revenue growth by introducing bite-sized course packages.",
+    tech: ["eLearning", "Video Platform", "Assessment System", "Performance Testing"],
     image: "/textures/sand.jpg"
+  },
+  {
+    title: "Cheesed Anytime – Charity Assistance App",
+    description: "Increased community help requests by 30% through an optimized service request workflow. Focused testing on user journey optimization.",
+    tech: ["Charity App", "Workflow Testing", "User Journey", "Mobile Testing"],
+    image: "/textures/wood.jpg"
+  },
+  {
+    title: "Unpin SECCA Web – E-Sports Tournament Platform",
+    description: "Managed admin panel access for 12 user roles, ensuring secure and scalable permission controls. Comprehensive role-based testing.",
+    tech: ["E-Sports", "Admin Panel", "Permission Controls", "Security Testing"],
+    image: "/textures/sky.png"
   }
 ];
 
@@ -64,7 +76,7 @@ export default function Projects() {
       data-section="projects"
     >
       <div className="projects-content">
-        <h2 className="section-title">Featured Projects</h2>
+        <h2 className="section-title">Major Projects & Experience</h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
             <div 

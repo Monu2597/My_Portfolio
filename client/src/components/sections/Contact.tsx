@@ -56,21 +56,45 @@ export default function Contact() {
           <div className="contact-info">
             <h3>Get In Touch</h3>
             <p>
-              Ready to bring your ideas to life? Let's discuss how we can create 
-              something extraordinary together.
+              Looking for opportunities to leverage my QA expertise in challenging projects. 
+              Open to discussing manual testing, automation, and quality assurance roles.
             </p>
             <div className="contact-details">
               <div className="contact-item">
                 <span className="contact-label">Email</span>
-                <span className="contact-value">hello@portfolio.com</span>
+                <span className="contact-value">mohityadav2597@gmail.com</span>
+              </div>
+              <div className="contact-item">
+                <span className="contact-label">Phone</span>
+                <span className="contact-value">+91 8826920160</span>
               </div>
               <div className="contact-item">
                 <span className="contact-label">Location</span>
-                <span className="contact-value">San Francisco, CA</span>
+                <span className="contact-value">New Delhi, India</span>
               </div>
               <div className="contact-item">
-                <span className="contact-label">Response Time</span>
-                <span className="contact-value">Within 24 hours</span>
+                <span className="contact-label">LinkedIn</span>
+                <span className="contact-value">Available on request</span>
+              </div>
+            </div>
+            <div className="education-section">
+              <h3>Education & Certifications</h3>
+              <div className="education-item">
+                <h4>Master of Computer Applications (MCA)</h4>
+                <p>Maharaja Agrasen Himalayan Garhwal University, Uttarakhand (2020-2023)</p>
+              </div>
+              <div className="education-item">
+                <h4>Bachelor of Computer Applications (BCA)</h4>
+                <p>Kalinga University, Chhattisgarh (2017-2020)</p>
+              </div>
+              <div className="tools-section">
+                <h4>Tools & Technologies</h4>
+                <p>Jira • Postman • Selenium (Basics) • Zoho • MS Excel • Agile Boards • GitHub • VS Code • AI Tools</p>
+              </div>
+              <div className="learning-section">
+                <h4>Currently Learning</h4>
+                <p>Selenium Automation • Python • HTML • CSS</p>
+                <p><strong>Goal:</strong> Becoming an Automation QA Expert</p>
               </div>
             </div>
           </div>

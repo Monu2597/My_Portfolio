@@ -5,14 +5,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
-  { name: "React", level: 95, color: "#61DAFB" },
-  { name: "Three.js", level: 90, color: "#000000" },
-  { name: "TypeScript", level: 88, color: "#3178C6" },
-  { name: "Node.js", level: 85, color: "#339933" },
-  { name: "GSAP", level: 82, color: "#88CE02" },
-  { name: "WebGL", level: 75, color: "#990000" },
-  { name: "Python", level: 80, color: "#3776AB" },
-  { name: "MongoDB", level: 78, color: "#47A248" }
+  { name: "Manual Testing", level: 95, color: "#6366f1" },
+  { name: "Test Planning", level: 90, color: "#ec4899" },
+  { name: "API Testing (Postman)", level: 88, color: "#f59e0b" },
+  { name: "Jira Management", level: 92, color: "#10b981" },
+  { name: "Regression Testing", level: 90, color: "#8b5cf6" },
+  { name: "Agile Methodology", level: 85, color: "#06b6d4" },
+  { name: "Test Automation (Selenium)", level: 65, color: "#84cc16" },
+  { name: "Defect Tracking", level: 88, color: "#f97316" },
+  { name: "Test Documentation", level: 92, color: "#ef4444" },
+  { name: "Python (Learning)", level: 55, color: "#3b82f6" }
 ];
 
 export default function Skills() {
@@ -48,7 +50,7 @@ export default function Skills() {
       data-section="skills"
     >
       <div className="skills-content">
-        <h2 className="section-title">Skills & Expertise</h2>
+        <h2 className="section-title">Technical Skills & Expertise</h2>
         <div className="skills-grid">
           {skills.map((skill, index) => (
             <div 

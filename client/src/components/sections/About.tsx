@@ -35,29 +35,36 @@ export default function About() {
         <h2 className="section-title">About Me</h2>
         <div className="about-text">
           <p>
-            I'm a passionate developer who combines technical expertise with creative vision 
-            to build extraordinary digital experiences. With a focus on modern web technologies 
-            and 3D graphics, I create applications that push the boundaries of what's possible 
-            in the browser.
+            I'm a dedicated Senior QA Engineer with 5+ years of hands-on experience in manual testing 
+            across web and mobile applications. I excel at test planning, bug reporting, and leading 
+            end-to-end quality assurance processes that elevate product quality and customer satisfaction.
           </p>
           <p>
-            My journey spans full-stack development, 3D visualization, and interactive design. 
-            I believe in the power of technology to tell stories and create meaningful connections 
-            between brands and their audiences.
+            My expertise spans from manual testing to test automation basics, with a strong focus on 
+            QA process optimization and cross-functional collaboration. I'm passionate about ensuring 
+            software excellence and am actively expanding my skills in automation testing with Selenium and Python.
+          </p>
+          <p>
+            Currently pursuing opportunities to leverage my quality assurance expertise while transitioning 
+            into automation testing, combining my solid foundation in manual testing with emerging automation skills.
           </p>
         </div>
         <div className="about-stats">
           <div className="stat">
-            <span className="stat-number">50+</span>
-            <span className="stat-label">Projects Completed</span>
+            <span className="stat-number">15+</span>
+            <span className="stat-label">Projects Tested</span>
           </div>
           <div className="stat">
             <span className="stat-number">5+</span>
             <span className="stat-label">Years Experience</span>
           </div>
           <div className="stat">
-            <span className="stat-number">20+</span>
-            <span className="stat-label">Technologies Mastered</span>
+            <span className="stat-number">30%</span>
+            <span className="stat-label">Bug Detection Rate Improvement</span>
+          </div>
+          <div className="stat">
+            <span className="stat-number">40K+</span>
+            <span className="stat-label">Users Served</span>
           </div>
         </div>
       </div>
