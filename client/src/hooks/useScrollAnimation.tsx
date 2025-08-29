@@ -34,7 +34,8 @@ export function useScrollAnimation() {
         
         // Update current section based on the most visible section
         if (currentEntry && highestRatio > 0.1) {
-          const sectionId = currentEntry.target.getAttribute('data-section');
+          const element = currentEntry.target as Element;
+          const sectionId = element.getAttribute('data-section');
           if (sectionId) {
             setCurrentSection(sectionId);
           }

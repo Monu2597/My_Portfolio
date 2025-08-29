@@ -19,19 +19,19 @@ export default function Hero() {
       }
     });
 
-    // Initial animations
+    // Initial animations - ensure visibility
     gsap.fromTo(titleRef.current, 
       { opacity: 0, y: 100 }, 
-      { opacity: 1, y: 0, duration: 1, delay: 0.5 }
+      { opacity: 1, y: 0, duration: 1.2, delay: 0.3, ease: "power2.out" }
     );
     gsap.fromTo(subtitleRef.current, 
       { opacity: 0, y: 50 }, 
-      { opacity: 1, y: 0, duration: 1, delay: 0.8 }
+      { opacity: 1, y: 0, duration: 1.2, delay: 0.6, ease: "power2.out" }
     );
 
-    // Scroll-based animations
-    tl.to(titleRef.current, { y: -100, opacity: 0.5 })
-      .to(subtitleRef.current, { y: -50, opacity: 0.3 }, "<");
+    // Scroll-based animations - keep title more visible
+    tl.to(titleRef.current, { y: -50, opacity: 0.8 })
+      .to(subtitleRef.current, { y: -25, opacity: 0.6 }, "<");
 
   }, []);
 

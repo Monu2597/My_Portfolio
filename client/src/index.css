@@ -175,6 +175,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  opacity: 1 !important;
+  visibility: visible !important;
+  /* Fallback color for browsers that don't support background-clip */
+  color: var(--primary);
+  /* Ensure title is always visible */
+  min-opacity: 0.8;
 }
 
 .hero-subtitle {
