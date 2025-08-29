@@ -16,7 +16,7 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden' }}>
+      <div style={{ width: '100vw', minHeight: '100vh', position: 'relative' }}>
         <Portfolio />
       </div>
     </QueryClientProvider>
