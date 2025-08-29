@@ -14,7 +14,8 @@
     "db:push": "drizzle-kit push",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "deploy": "npm run clean && npm run build && npm start"
+    "deploy": "npm run clean && npm run build && npm start",
+    "vercel-build": "npm run build:client"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.5",
